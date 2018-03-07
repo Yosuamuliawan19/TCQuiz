@@ -23,6 +23,8 @@ Route::put('/updateCategory' , 'categoryController@updateCategory');
 Route::delete('/deleteCategory' , 'categoryController@deleteCategory');
 
 Route::get('getItem' , 'ItemController@getItem');
+Route::get('getItemById/{id}' , 'ItemController@getItemById');
+
 Route::post('/addItem' , 'ItemController@addItem');
 Route::put('/updateItem' , 'ItemController@updateItem');
 Route::delete('/deleteItem' , 'ItemController@deleteItem');

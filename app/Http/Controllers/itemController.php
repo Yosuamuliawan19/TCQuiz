@@ -7,9 +7,13 @@ use App\item;
 
 class itemController extends Controller
 {
-        public function getItem(){
+    public function getItem(){
     	$data = item::all();
     	return $data;
+    }
+    public function getItemById(Request $request){
+        $data = item::with('categories')->where('id', $request->id)->first();
+        return $data;
     }
 
     public function addItem(Request $request){

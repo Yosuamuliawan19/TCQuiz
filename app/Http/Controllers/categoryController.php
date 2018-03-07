@@ -11,12 +11,8 @@ class categoryController extends Controller
 	
     public function getCategory(){
     	$data = category::all();
-		
-    	$myItems = category::find(2)->items;
-    	
-		echo $myItems;
+		echo $data;
 
-    	
     }
 
 
